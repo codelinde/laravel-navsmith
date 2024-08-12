@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace CodeLinde\Navsmith\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class NavsmithCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-navsmith';
 
     public $description = 'My command';
 
