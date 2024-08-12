@@ -4,7 +4,8 @@
     "keywords": [
         "CodeLinde",
         "laravel",
-        "laravel-navsmith"
+        "laravel-navsmith",
+        "navsmith"
     ],
     "homepage": "https://github.com/codelinde/laravel-navsmith",
     "license": "MIT",
@@ -35,9 +36,11 @@
     },
     "autoload": {
         "psr-4": {
-            "CodeLinde\\Navsmith\\": "src/",
-            "CodeLinde\\Navsmith\\Database\\Factories\\": "database/factories/"
-        }
+            "CodeLinde\\Navsmith\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

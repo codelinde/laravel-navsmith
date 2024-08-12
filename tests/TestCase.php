@@ -4,17 +4,17 @@ namespace CodeLinde\Navsmith\Tests;
 
 use CodeLinde\Navsmith\NavsmithServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
+use Illuminate\Support\Facades\Route;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
+    use InteractsWithViews;
+
     protected function setUp(): void
     {
         parent::setUp();
-
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'CodeLinde\\Navsmith\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
     }
 
     protected function getPackageProviders($app)
@@ -27,10 +27,14 @@ class TestCase extends Orchestra
     public function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
+    }
 
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-navsmith_table.php.stub';
-        $migration->up();
-        */
+    protected function defineRoutes($router)
+    {
+        Route::navsmith(function () {
+            Route::get('/', fn () => 'home route')->name('home');
+            Route::get('/about', fn () => 'about route')->name('about');
+            Route::get('/contact', fn () => 'contact route')->name('contact');
+        });
     }
 }

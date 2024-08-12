@@ -1,0 +1,18 @@
+<li><a
+                                        style="color: rgb(0 0 0); font-weight: 700;"
+                        
+            href="http://localhost"
+        >Home</a>
+    </li>
+    <li><a
+                                        style="color: rgb(0 0 0);"
+                        
+            href="http://localhost/about"
+        >About</a>
+    </li>
+    <li><a
+                                        style="color: rgb(0 0 0);"
+                        
+            href="http://localhost/contact"
+        >Contact</a>
+    </li>

@@ -3,6 +3,11 @@
 namespace CodeLinde\Navsmith;
 
 use CodeLinde\Navsmith\Commands\NavsmithCommand;
+use CodeLinde\Navsmith\Facades\Navsmith;
+use CodeLinde\Navsmith\View\Components\Links;
+use Illuminate\Routing\RouteRegistrar;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Route;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -17,9 +22,22 @@ class NavsmithServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-navsmith')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel_navsmith_table')
-            ->hasCommand(NavsmithCommand::class);
+            ->hasViews();
+    }
+
+    public function packageRegistered(): void
+    {
+        Route::macro(
+            'navsmith',
+            function (\Closure $callback) {
+                /** @var RouteRegistrar $this */
+                return $this->name(Navsmith::getNamePrefix())->group($callback);
+            }
+        );
+    }
+
+    public function packageBooted(): void
+    {
+        Blade::component(Links::class, 'navsmith');
     }
 }

@@ -1,0 +1,18 @@
+<li><a
+                            class="text-black font-bold"
+                                    
+            href="http://localhost"
+        >Home</a>
+    </li>
+    <li><a
+                            class="text-black"
+                                    
+            href="http://localhost/about"
+        >About</a>
+    </li>
+    <li><a
+                            class="text-black"
+                                    
+            href="http://localhost/contact"
+        >Contact</a>
+    </li>

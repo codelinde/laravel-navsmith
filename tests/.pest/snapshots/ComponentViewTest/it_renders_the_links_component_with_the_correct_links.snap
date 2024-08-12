@@ -1,0 +1,15 @@
+<li><a
+                                    
+            href="http://localhost"
+        >Home</a>
+    </li>
+    <li><a
+                                    
+            href="http://localhost/about"
+        >About</a>
+    </li>
+    <li><a
+                                    
+            href="http://localhost/contact"
+        >Contact</a>
+    </li>
