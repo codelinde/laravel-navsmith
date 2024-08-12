@@ -3,7 +3,6 @@
 namespace CodeLinde\Navsmith\Tests;
 
 use CodeLinde\Navsmith\NavsmithServiceProvider;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
 use Illuminate\Support\Facades\Route;
 use Orchestra\Testbench\TestCase as Orchestra;

@@ -2,7 +2,6 @@
 
 namespace CodeLinde\Navsmith;
 
-use CodeLinde\Navsmith\Commands\NavsmithCommand;
 use CodeLinde\Navsmith\Facades\Navsmith;
 use CodeLinde\Navsmith\View\Components\Links;
 use Illuminate\Routing\RouteRegistrar;
