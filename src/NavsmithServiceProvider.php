@@ -2,9 +2,9 @@
 
 namespace CodeLinde\Navsmith;
 
+use CodeLinde\Navsmith\Commands\NavsmithCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use CodeLinde\Navsmith\Commands\NavsmithCommand;
 
 class NavsmithServiceProvider extends PackageServiceProvider
 {

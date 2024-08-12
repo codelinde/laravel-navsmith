@@ -2,9 +2,9 @@
 
 namespace CodeLinde\Navsmith\Tests;
 
+use CodeLinde\Navsmith\NavsmithServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use CodeLinde\Navsmith\NavsmithServiceProvider;
 
 class TestCase extends Orchestra
 {
