@@ -8,6 +8,8 @@
 **Navsmith** is a lightweight, unintrusive Laravel package for easily creating navigation links out of routes you
 define. It's particularly useful for SPA-like sites.
 
+[Why did I build this?](https://ryanlinde.dev/posts/introducing-navsmith)
+
 ## Usage
 
 Just define your routes using the `navsmith` method and give them route names you'd like to use in your display...
